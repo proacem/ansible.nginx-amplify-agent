@@ -1,0 +1,98 @@
+[credentials]
+api_key = {{ nginx_amplify_api_key }}
+hostname = {{ nginx_amplify_hostname }}
+uuid = {{ nginx_amplify_uuid }}
+imagename = {{ nginx_amplify_imagename }}
+
+[nginx]
+user = {{ nginx_amplify_user }}
+configfile = {{ nginx_amplify_configfile }}
+{% if nginx_amplify_stub_status is defined %}
+stub_status = {{ nginx_amplify_stub_status }}
+{% endif %}
+{% if nginx_amplify_plus_status is defined %}
+plus_status = {{ nginx_amplify_plus_status }}
+{% endif %}
+{% if nginx_amplify_exclude_logs is defined %}
+exclude_logs = {{ nginx_amplify_exclude_logs }}
+{% endif %}
+
+[proxies]
+{% if nginx_amplify_https is defined %}
+https =  {{ nginx_amplify_https }}
+{% endif %}
+
+[cloud]
+api_url = {{ nginx_amplify_api_url }}
+api_timeout = {{ nginx_amplify_api_timeout }}
+
+[extensions]
+phpfpm = {{ nginx_amplify_phpfpm }}
+mysql = {{ nginx_amplify_mysql }}
+
+{% if nginx_amplify_mysql %}
+[mysql]
+host = {{ nginx_amplify_mysql_host }}
+port = {{ nginx_amplify_mysql_port }}
+unix_socket = {{ nginx_amplify_mysql_unix_socket }}
+user = {{ nginx_amplify_mysql_user }}
+password = {{ nginx_amplify_mysql_password }}
+{% endif %}
+
+[listeners]
+keys = {{ nginx_amplify_listers_keys }}
+
+[listener_syslog-default]
+address = {{ nginx_amplify_listener_syslog_default_address }}
+
+[loggers]
+keys = {{ nginx_amplify_loggers_keys }}
+
+[handlers]
+keys = {{ nginx_amplify_handlers_keys }}
+
+[formatters]
+keys = {{ nginx_amplify_formatters_keys }}
+
+[formatter_simpleFormatter]
+format = {{ nginx_amplify_formatter_simpleFormatter_format }}
+datefmt = {{ nginx_amplify_formatter_simpleFormatter_datefmt }}
+
+[logger_devnull]
+level = {{ nginx_amplify_logger_devnull_level }}
+qualname = {{ nginx_amplify_logger_devnull_qualname }}
+handlers = {{ nginx_amplify_logger_devnull_handlers }}
+formatter = {{ nginx_amplify_logger_devnull_formatter }}
+propagate = {{ nginx_amplify_logger_devnull_propagate }}
+
+[handler_devnull]
+class = {{ nginx_amplify_handler_devnull_class }}
+level = {{ nginx_amplify_handler_devnull_level }}
+formatter = {{ nginx_amplify_handler_devnull_formatter }}
+args = {{ nginx_amplify_handler_devnull_args }}
+
+[logger_root]
+level = {{ nginx_amplify_logger_root_level }}
+handlers = {{ nginx_amplify_logger_root_handlers }}
+qualname = {{ nginx_amplify_logger_root_qualname }}
+formatter = {{ nginx_amplify_logger_root_formatter }}
+propagate = {{ nginx_amplify_logger_root_propagate }}
+
+[handler_root]
+class = {{ nginx_amplify_handler_root_class }}
+level = {{ nginx_amplify_handler_root_level }}
+formatter = {{ nginx_amplify_handler_root_formatter }}
+args = {{ nginx_amplify_handler_root_args }}
+
+[logger_agent-default]
+level = {{ nginx_amplify_logger_agent_default_level }}
+qualname = {{ nginx_amplify_logger_agent_default_qualname }}
+handlers = {{ nginx_amplify_logger_agent_default_handlers }}
+formatter = {{ nginx_amplify_logger_agent_default_formatter }}
+propagate = {{nginx_amplify_logger_agent_default_propagate }}
+
+[handler_agent-default]
+class = {{ nginx_amplify_handler_agent_default_class }}
+level = {{ nginx_amplify_handler_agent_default_level }}
+formatter = {{ nginx_amplify_handler_agent_default_formatter}}
+args = {{ nginx_amplify_handler_agent_default_args }}

@@ -1,2 +1,17 @@
 ---
 # handlers file for sbaerlocher.nginx-amplify
+
+- name: restart amplify-agent
+  service:
+    name: amplify-agent
+    state: restarted
+
+- name: start amplify-agent
+  service:
+    name: amplify-agent
+    state: started
+
+- name: enabled amplify-agent
+  service:
+    name: amplify-agent
+    enabled: true

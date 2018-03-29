@@ -34,3 +34,35 @@
   tags:
     - configuration
     - packages
+
+- name: install nginx-amplify
+  become: true
+  package:
+    name: nginx-amplify-agent
+  notify:
+    - enable amplify-agent
+  tags:
+    - packages
+
+- name: create amplify-agent user in mysql
+  become: true
+  mysql_user:
+    name: amplify-agent
+    password: amplify-agent
+    state: present
+  when: nginx_amplify_mysql
+  tags:
+    - configuration
+
+- name: create agent configs
+  become: true
+  template:
+    src: agent.conf.j2
+    dest: /etc/amplify-agent/agent.conf
+    owner: www-data
+    group: root
+    mode: 0644
+  notify:
+    - restart amplify-agent
+  tags:
+    - configuration
