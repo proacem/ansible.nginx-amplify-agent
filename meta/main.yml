@@ -15,7 +15,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - xenial
-        - artfu
     - name: Debian
       versions:
         - wheezy
