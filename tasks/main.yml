@@ -1,5 +1,5 @@
 ---
-# tasks file for sbaerlocher.nginx-amplify
+# tasks file for sbaerlocher.nginx_amplify_agent
 
 - name: add OS specific variables
   include_vars: "{{ loop_vars }}"
@@ -50,7 +50,7 @@
     name: amplify-agent
     password: amplify-agent
     state: present
-  when: nginx_amplify_mysql
+  when: nginx_amplify_agent_mysql
   tags:
     - configuration
 

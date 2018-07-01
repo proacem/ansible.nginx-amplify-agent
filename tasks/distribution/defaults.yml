@@ -1,5 +1,5 @@
 ---
-# tasks file for sbaerlocher.nginx-amplify
+# tasks file for sbaerlocher.nginx_amplify_agent
 
 - name: Message
   debug:

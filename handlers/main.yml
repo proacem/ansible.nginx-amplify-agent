@@ -1,5 +1,5 @@
 ---
-# handlers file for sbaerlocher.nginx-amplify
+# handlers file for sbaerlocher.nginx_amplify_agent
 
 - name: restart amplify-agent
   service:

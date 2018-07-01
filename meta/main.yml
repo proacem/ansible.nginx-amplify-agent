@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  role_name: nginx-amplify
+  role_name: nginx_amplify_agent
   author: Simon Baerlocher <s.baerlocher@sbaerlocher.ch>
   description: Install and configure Nginx Amplify.
   license: license (MIT)

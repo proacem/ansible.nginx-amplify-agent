@@ -1,5 +1,5 @@
 ---
-# tasks file for sbaerlocher.nginx-amplify
+# tasks file for sbaerlocher.nginx_amplify_agent
 
 - name: "{{ ansible_distribution | lower }} | add key"
   rpm_key:
