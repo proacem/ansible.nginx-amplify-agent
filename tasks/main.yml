@@ -40,7 +40,7 @@
   package:
     name: nginx-amplify-agent
   notify:
-    - enable amplify-agent
+    - enabled amplify-agent
   tags:
     - packages
 
