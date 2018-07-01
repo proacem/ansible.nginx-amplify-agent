@@ -82,6 +82,10 @@ ansible-galaxy install sbaerlocher.nginx-amplify
 
 ## Changelog
 
+### 1.0.1
+
+* update tags and defaults vars
+
 ### 1.0
 
 * inital commit

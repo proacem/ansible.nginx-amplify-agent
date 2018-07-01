@@ -2,7 +2,7 @@
 # defaults file for sbaerlocher.nginx-amplify
 
 nginx_amplify_api_key:
-nginx_amplify_hostname: "{{ ansible_fqdn | default(ansible_hostname) }}"
+nginx_amplify_hostname: "{{ ansible_nodename | default(ansible_fqdn) }}"
 nginx_amplify_uuid:
 nginx_amplify_imagename:
 
@@ -22,7 +22,7 @@ nginx_amplify_api_timeout: 5.0
 
 # extensions
 nginx_amplify_phpfpm: true
-nginx_amplify_mysql: true
+nginx_amplify_mysql: false
 
 # mysql
 nginx_amplify_mysql_host:
