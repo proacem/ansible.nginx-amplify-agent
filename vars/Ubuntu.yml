@@ -1,4 +1,4 @@
 ---
-# vars file for sbaerlocher.nginx-amplify
+# vars file for sbaerlocher.nginx_amplify_agent
 
-nginx_amplify_user: www-data
+nginx_amplify_agent_user: www-data
