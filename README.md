@@ -82,9 +82,13 @@ ansible-galaxy install sbaerlocher.nginx_amplify_agent
 
 ## Changelog
 
+### 1.1.1
+
+* fix error
+
 ### 1.1
 
-# renmae role
+* renmae role
 
 ### 1.0.1
 
